@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f8bccc64db8674387f4a3f98fbc223, type: 3}
+  m_Name: DefaultCharacterData
+  m_EditorClassIdentifier: 
+  playerName: Chad Test
+  Level: 1
+  maxHP: 100
+  HP: 100
+  ATK: 35
+  DEF: 40
+  Critical: 25
+  EXP: 1
+  maxEXP: 3
+  money: 1000000000

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MainButtonManager : MonoBehaviour
@@ -9,6 +10,8 @@ public class MainButtonManager : MonoBehaviour
     public GameObject statusInfo;
     public GameObject inventoryInfo;
     public GameObject inventoryEquipmentInfo;
+    public GameObject inventoryEquip;
+    public GameObject inventoryEquipmentReleaseInfo;
 
     // 스텟 열기
     public void StatusBtn()
@@ -38,24 +41,45 @@ public class MainButtonManager : MonoBehaviour
         inventoryBtn.SetActive(true);
         inventoryInfo.SetActive(false);
     }
-    // 인벤토리 팝업창 열기
+    // 인벤토리 팝업창 장착 관리 열기 및 해제 관리
     public void InventoryPopUpBtn()
     {
-
+        if (inventoryEquip.activeSelf == true)
+        {
+            inventoryEquipmentReleaseInfo.SetActive(true);
+        }
+        else
+        {
+            inventoryEquipmentInfo.SetActive(true);
+        }
+        
     }
-    // 인벤토리 팝업창 장착
+    // 인벤토리 팝업창 장착 및 해제
     public void InventoryPopUpEquipmentBtn()
     {
-
+        if (inventoryEquip.activeSelf == true)
+        {
+            inventoryEquipmentReleaseInfo.SetActive(false);
+            inventoryEquip.SetActive(false);
+        }
+        else
+        {
+            inventoryEquipmentInfo.SetActive(false);
+            inventoryEquip.SetActive(true);
+        }
     }
-
     // 인벤토리 팝업창 닫기
-    public void InventoryPopUpBackBtn()
+    public void InventoryPopUpEquipmentBackBtn()
     {
-
+        if (inventoryEquip.activeSelf == true)
+        {
+            inventoryEquipmentReleaseInfo.SetActive(false);
+        }
+        else
+        {
+            inventoryEquipmentInfo.SetActive(false);
+        }
     }
-
-
     public void GameStartBtn()
     {
         // 게임 시작
